@@ -18,6 +18,8 @@ class GracefulRunnerConfig extends AbstractBundleConfig
      *
      * @api
      *
+     * @phpstan-return list<\Seld\Signal\SignalHandler::SIG*|int>
+     *
      * @return array<string>
      */
     public function getSignalsToAddHandlerTo(): array

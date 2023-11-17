@@ -59,7 +59,7 @@ class GracefulRunner implements GracefulRunnerInterface
             }
         }
 
-        $signalHandler->unregister($this->config->getSignalsToAddHandlerTo());
+        $signalHandler->unregister();
 
         return $this->executedIterations;
     }
