@@ -12,8 +12,6 @@ use Spryker\Zed\Kernel\Business\AbstractFacade;
 
 /**
  * @method \Spryker\Zed\GracefulRunner\Business\GracefulRunnerBusinessFactory getFactory()
- * @method \Spryker\Zed\GracefulRunner\Persistence\GracefulRunnerRepositoryInterface getRepository()
- * @method \Spryker\Zed\GracefulRunner\Persistence\GracefulRunnerEntityManagerInterface getEntityManager()
  */
 class GracefulRunnerFacade extends AbstractFacade implements GracefulRunnerFacadeInterface
 {

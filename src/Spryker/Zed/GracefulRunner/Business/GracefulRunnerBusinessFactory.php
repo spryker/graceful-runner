@@ -13,8 +13,6 @@ use Spryker\Zed\Kernel\Business\AbstractBusinessFactory;
 
 /**
  * @method \Spryker\Zed\GracefulRunner\GracefulRunnerConfig getConfig()
- * @method \Spryker\Zed\GracefulRunner\Persistence\GracefulRunnerEntityManagerInterface getEntityManager()
- * @method \Spryker\Zed\GracefulRunner\Persistence\GracefulRunnerRepositoryInterface getRepository()
  */
 class GracefulRunnerBusinessFactory extends AbstractBusinessFactory
 {

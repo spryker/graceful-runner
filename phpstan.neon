@@ -1,3 +1,7 @@
 parameters:
     level: 8
     reportUnmatchedIgnoredErrors: false
+    ignoreErrors:
+        # Defensive programming: method_exists check kept for runtime safety
+        -
+            identifier: function.alreadyNarrowedType
