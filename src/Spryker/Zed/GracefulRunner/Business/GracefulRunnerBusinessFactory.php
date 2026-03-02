@@ -16,9 +16,6 @@ use Spryker\Zed\Kernel\Business\AbstractBusinessFactory;
  */
 class GracefulRunnerBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\GracefulRunner\Business\GracefulRunner\GracefulRunnerInterface
-     */
     public function createGracefulRunner(): GracefulRunnerInterface
     {
         return new GracefulRunner($this->getConfig());

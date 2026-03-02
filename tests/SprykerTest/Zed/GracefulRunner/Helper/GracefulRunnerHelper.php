@@ -24,11 +24,6 @@ class GracefulRunnerHelper extends Module
      */
     protected $numberOfExecutedItems = 0;
 
-    /**
-     * @param \Codeception\TestInterface $test
-     *
-     * @return void
-     */
     public function _before(TestInterface $test): void
     {
         $this->numberOfExecutedIterations = 0;
@@ -83,9 +78,6 @@ class GracefulRunnerHelper extends Module
         return $result;
     }
 
-    /**
-     * @return void
-     */
     protected function executeOneIteration(): void
     {
         for ($i = 0; $i < 5; $i++) {
@@ -95,12 +87,6 @@ class GracefulRunnerHelper extends Module
         $this->numberOfExecutedIterations++;
     }
 
-    /**
-     * @param int $expectedNumberOfExecutedIterations
-     * @param int $expectedNumberOfExecutedItems
-     *
-     * @return void
-     */
     public function assertGeneratorCalls(int $expectedNumberOfExecutedIterations, int $expectedNumberOfExecutedItems): void
     {
         $this->assertSame(

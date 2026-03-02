@@ -28,9 +28,6 @@ class GracefulRunnerFacadeTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testRunReturnsNumberOfExecutedIterations(): void
     {
         // Arrange
@@ -43,9 +40,6 @@ class GracefulRunnerFacadeTest extends Unit
         $this->assertSame(3, $executedIterations, sprintf('Expected to have "%s" executed iterations but got "%s"', 3, $executedIterations));
     }
 
-    /**
-     * @return void
-     */
     public function testRunWithoutSendingSignalExecutesAllIterations(): void
     {
         // Arrange
@@ -58,9 +52,6 @@ class GracefulRunnerFacadeTest extends Unit
         $this->tester->assertGeneratorCalls(3, 15);
     }
 
-    /**
-     * @return void
-     */
     public function testRunWithSendingSignalExecutesUntilSignalIsTriggered(): void
     {
         // Arrange
@@ -73,9 +64,6 @@ class GracefulRunnerFacadeTest extends Unit
         $this->tester->assertGeneratorCalls(1, 5);
     }
 
-    /**
-     * @return void
-     */
     public function testRunWithSendingSignalExecutesUntilSignalIsTriggeredAndReturnsResultWhenGeneratorIsWrappedWithTryCatch(): void
     {
         // Arrange
@@ -88,9 +76,6 @@ class GracefulRunnerFacadeTest extends Unit
         $this->assertIsArray($generator->getReturn());
     }
 
-    /**
-     * @return void
-     */
     public function testRunAndGeneratorGetReturnIsCalledThrowsExceptionWhenGeneratorIsNotWrappedWithTryCatch(): void
     {
         // Arrange

@@ -23,20 +23,11 @@ class GracefulRunner implements GracefulRunnerInterface
      */
     protected $executedIterations = 0;
 
-    /**
-     * @param \Spryker\Zed\GracefulRunner\GracefulRunnerConfig $config
-     */
     public function __construct(GracefulRunnerConfig $config)
     {
         $this->config = $config;
     }
 
-    /**
-     * @param \Generator $generator
-     * @param string|null $throwableClassName
-     *
-     * @return int
-     */
     public function run(Generator $generator, ?string $throwableClassName = null): int
     {
         $signalHandler = $this->createSignalHandler();
@@ -67,9 +58,6 @@ class GracefulRunner implements GracefulRunnerInterface
         return $this->executedIterations;
     }
 
-    /**
-     * @return \Seld\Signal\SignalHandler
-     */
     protected function createSignalHandler(): SignalHandler
     {
         return SignalHandler::create($this->config->getSignalsToAddHandlerTo());
