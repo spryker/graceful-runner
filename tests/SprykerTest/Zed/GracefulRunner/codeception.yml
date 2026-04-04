@@ -18,4 +18,5 @@ suites:
             enabled:
                 - \SprykerTest\Shared\Testify\Helper\Environment
                 - \SprykerTest\Zed\Testify\Helper\Business\BusinessHelper
+                - \SprykerTest\Shared\Testify\Helper\DependencyHelper
                 - \SprykerTest\Zed\GracefulRunner\Helper\GracefulRunnerHelper
